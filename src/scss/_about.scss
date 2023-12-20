@@ -276,14 +276,14 @@
 
 .about__header-line-1 {
 
-  @media (max-width: $breakpoint768) {
+  @media (max-width: $breakpoint992) {
     animation: waveAnimation 2s infinite ease-in-out;
   }
 }
 
 .about__header-line-2 {
 
-  @media (max-width: $breakpoint768) {
+  @media (max-width: $breakpoint992) {
     animation: waveAnimation 2s infinite ease-in-out;
     animation-delay: 0.5s;
   }
