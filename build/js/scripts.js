@@ -27,3 +27,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper('.main__tresh-slider', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    navigation: {
+      nextEl: '.main__tresh-slider-arrow--next',
+      prevEl: '.main__tresh-slider-arrow--prev',
+    },
+
+    pagination: {
+      el: '.main__tresh-slider-pagination',
+      type: 'bullets',
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper('.main__longrid-slider', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+
+    navigation: {
+      nextEl: '.main__longrid-slider-arrow--next',
+      prevEl: '.main__longrid-slider-arrow--prev',
+    },
+
+    pagination: {
+      el: '.main__longrid-slider-pagination',
+      type: 'bullets',
+    },
+  });
+});
