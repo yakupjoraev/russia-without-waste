@@ -34,6 +34,10 @@ body {
   }
 }
 
+[data-parallax="true"] {
+  will-change: transform;
+}
+
 // Animations
 // Fade
 @keyframes fade {

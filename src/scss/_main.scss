@@ -651,7 +651,7 @@
     z-index: 2;
 
     @media (min-width: 1600px) {
-      bottom: 0;
+      bottom: 50px;
     }
 
     @media (max-width: $breakpoint992) {
@@ -675,7 +675,7 @@
     max-width: 100%;
 
     @media (min-width: 1600px) {
-      bottom: -40px;
+      bottom: 20px;
     }
 
     @media (max-width: $breakpoint992) {
@@ -975,13 +975,13 @@
 
   &__longrid-line-1 {
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     left: 0;
     max-width: 100%;
     z-index: 2;
 
     @media (min-width: 1600px) {
-      bottom: 0;
+      bottom: 40px;
     }
 
     @media (max-width: $breakpoint992) {
@@ -1034,11 +1034,11 @@
     background: linear-gradient(180deg, #FDBA74 15.1%, #FF7F72 79.69%);
     position: relative;
     padding-top: 200px;
-    margin-top: -150px;
+    margin-top: -300px;
 
     @media (min-width: 1600px) {
-      margin-top: -250px;
-      padding-top: 200px;
+      margin-top: -360px;
+      padding-top: 240px;
     }
 
     @media (max-width: $breakpoint992) {

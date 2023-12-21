@@ -2,18 +2,24 @@
 // Custom scripts
 document.addEventListener("DOMContentLoaded", function () {
   const elementsWithParallax = document.querySelectorAll('[data-parallax]');
+  let rafId;
 
   // Параллакс при движении мыши
   document.addEventListener('mousemove', function (e) {
     const offsetX = e.clientX / window.innerWidth - 0.5;
     const offsetY = e.clientY / window.innerHeight - 0.5;
-    moveElements(elementsWithParallax, offsetX * 20, offsetY * 20);
+    moveElements(elementsWithParallax, offsetX * 5, offsetY * 5);
   });
 
-  // Параллакс при прокрутке
+  // Параллакс при прокрутке с использованием requestAnimationFrame
   document.addEventListener('scroll', function () {
-    const scrollTop = window.scrollY / window.innerHeight;
-    moveElements(elementsWithParallax, 0, scrollTop * 20);
+    if (!rafId) {
+      rafId = requestAnimationFrame(function () {
+        const scrollTop = window.scrollY / window.innerHeight;
+        moveElements(elementsWithParallax, 0, scrollTop * 2);
+        rafId = null;
+      });
+    }
   });
 
   function moveElements(elements, offsetX, offsetY) {
@@ -27,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.main__tresh-slider', {

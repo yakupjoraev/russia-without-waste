@@ -119,6 +119,10 @@ body.locked {
   overflow: hidden;
 }
 
+[data-parallax=true] {
+  will-change: transform;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -752,7 +756,7 @@ body.locked {
 
 .main__longrid-line-1 {
   position: absolute;
-  bottom: 80px;
+  bottom: 60px;
   left: 0;
   max-width: 100%;
   z-index: 2;
@@ -772,7 +776,7 @@ body.locked {
   background: linear-gradient(180deg, #FDBA74 15.1%, #FF7F72 79.69%);
   position: relative;
   padding-top: 200px;
-  margin-top: -150px;
+  margin-top: -300px;
 }
 
 .main__faq-top {
@@ -1388,11 +1392,11 @@ body.locked {
   }
 
   .main__tresh-footer-line-1 {
-    bottom: 0;
+    bottom: 50px;
   }
 
   .main__tresh-footer-line-2 {
-    bottom: -40px;
+    bottom: 20px;
   }
 
   .main__longrid {
@@ -1401,7 +1405,7 @@ body.locked {
   }
 
   .main__longrid-line-1 {
-    bottom: 0;
+    bottom: 40px;
   }
 
   .main__longrid-line-2 {
@@ -1409,8 +1413,8 @@ body.locked {
   }
 
   .main__faq {
-    margin-top: -250px;
-    padding-top: 200px;
+    margin-top: -360px;
+    padding-top: 240px;
   }
 
   .longrid__footer {
