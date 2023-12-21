@@ -1033,8 +1033,8 @@
   &__faq {
     background: linear-gradient(180deg, #FDBA74 15.1%, #FF7F72 79.69%);
     position: relative;
-    padding-top: 150px;
-    margin-top: -100px;
+    padding-top: 200px;
+    margin-top: -150px;
 
     @media (min-width: 1600px) {
       margin-top: -250px;
@@ -1103,6 +1103,7 @@
   &__faq-content {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   // .main__faq-question-1
@@ -1125,7 +1126,7 @@
       left: 0;
       width: calc(100%);
       height: calc(100%);
-      background-color: rgba(255, 255, 255, 0.40);
+      background-color: rgba(255, 255, 255, 1);
       border-radius: 60px;
       z-index: -1;
       overflow: hidden;
@@ -1134,16 +1135,15 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: -30px;
+      bottom: -26px;
       left: 0;
       width: 0px;
       height: 0px;
       border-style: solid;
       border-width: 0 20px 40px 20px;
-      border-color: transparent transparent rgba(255, 255, 255, 0.40) transparent;
+      border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
       border-radius: 10px 10px 10px 10px;
       transform: rotate(200deg);
-      opacity: 0.6;
       z-index: -2;
     }
 
@@ -1177,10 +1177,25 @@
       left: 0;
       width: calc(100%);
       height: calc(100%);
-      background-color: rgba(255, 255, 255, 0.40);
+      background-color: rgba(255, 255, 255, 1);
       border-radius: 60px;
       z-index: -1;
       overflow: hidden;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 20px 40px 20px;
+      border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
+      border-radius: 10px 10px 10px 10px;
+      transform: rotate(150deg);
+      z-index: -2;
     }
 
     @media (max-width: $breakpoint992) {
