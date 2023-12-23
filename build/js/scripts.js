@@ -2,32 +2,47 @@
 // Custom scripts
 document.addEventListener("DOMContentLoaded", function () {
   const elementsWithParallax = document.querySelectorAll('[data-parallax]');
-  let rafId;
-
-  // Параллакс при движении мыши
-  document.addEventListener('mousemove', function (e) {
-    const offsetX = e.clientX / window.innerWidth - 0.5;
-    const offsetY = e.clientY / window.innerHeight - 0.5;
-    moveElements(elementsWithParallax, offsetX * 5, offsetY * 5);
-  });
+  let ticking = false;
 
   // Параллакс при прокрутке с использованием requestAnimationFrame
   document.addEventListener('scroll', function () {
-    if (!rafId) {
-      rafId = requestAnimationFrame(function () {
-        const scrollTop = window.scrollY / window.innerHeight;
-        moveElements(elementsWithParallax, 0, scrollTop * 2);
-        rafId = null;
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        moveElements(elementsWithParallax);
+        ticking = false;
       });
+      ticking = true;
     }
   });
 
-  function moveElements(elements, offsetX, offsetY) {
+  function moveElements(elements) {
+    const viewportHeight = window.innerHeight;
+
     elements.forEach(element => {
       const shouldApplyParallax = element.dataset.parallax === "true";
+      const offsetY = parseInt(element.dataset.parallaxOffsetY) || 20; // Значение по умолчанию 20px
+      const elementRect = element.getBoundingClientRect();
+      const elementTop = elementRect.top;
+      const elementBottom = elementRect.bottom;
+
       if (shouldApplyParallax) {
-        element.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        if (elementTop < viewportHeight && elementBottom > 0) {
+          // Элемент частично виден на экране
+          const normalizedOffsetY = Math.max(0, Math.min(viewportHeight, elementTop)) / viewportHeight;
+          element.style.transition = 'transform 0.5s ease-out'; // Плавное изменение стилей
+          element.style.transform = `translateY(${(normalizedOffsetY - 1) * offsetY}px)`;
+          element.style.opacity = 'opacity 0.5s ease-out'
+          element.style.opacity = '1'
+        } else {
+          // Элемент полностью за пределами экрана
+          element.style.transition = 'transform 0.5s ease-out'; // Плавное изменение стилей
+          element.style.opacity = 'opacity 0.5s ease-out'
+          element.style.transform = 'translateY(-30%)';
+          element.style.opacity = '0'
+        }
       } else {
+        // Если параллакс не применяется, возвращаем элемент в исходное состояние
+        element.style.transition = 'transform 0.5s ease-out'; // Плавное изменение стилей
         element.style.transform = 'none';
       }
     });
@@ -35,7 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.swiper')
+  if (!container) {
+    return null
+  }
   const swiper = new Swiper('.main__tresh-slider', {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -48,11 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: '.main__tresh-slider-pagination',
       type: 'bullets',
+      clickable: true,
     },
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.swiper')
+  if (!container) {
+    return null
+  }
+
   const swiper = new Swiper('.main__longrid-slider', {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -65,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: '.main__longrid-slider-pagination',
       type: 'bullets',
+      clickable: true,
     },
   });
 });
