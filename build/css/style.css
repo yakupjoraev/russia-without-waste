@@ -1060,6 +1060,8 @@ body.locked {
   bottom: -90px;
   left: 0;
   max-width: 100%;
+  height: 200px;
+  width: 100%;
   z-index: 2;
 }
 
@@ -1818,6 +1820,7 @@ body.locked {
   }
 
   .about__header-line-1 {
+    height: auto;
     bottom: -40px;
   }
 
