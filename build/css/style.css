@@ -121,6 +121,20 @@ body.locked {
 
 [data-parallax=true] {
   will-change: transform;
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  -o-transition: transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+
+[data-parallax=true].visible {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 @-webkit-keyframes fade {
@@ -1532,7 +1546,7 @@ body.locked {
   }
 
   .main__longrid {
-    margin-top: -350px;
+    margin-top: -300px;
     padding-top: 250px;
   }
 

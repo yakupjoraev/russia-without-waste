@@ -36,6 +36,12 @@ body {
 
 [data-parallax="true"] {
   will-change: transform;
+  transform: translateY(-20%);
+  transition: transform 0.4s linear;
+
+  &.visible {
+    transform: translateY(0);
+  }
 }
 
 // Animations
