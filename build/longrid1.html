@@ -17,10 +17,24 @@
   <main>
     <section class="longrid" style="background: linear-gradient(180deg, #FFF5E8 0%, #FDD9C9 100%);">
   <div class="longrid__header">
-    <img class="longrid__header-pic" src="./img/longrid/longrid-header.png" alt="longrid header pic">
+    <picture>
+      <source srcset="./img/longrid/longrid-header.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-pic" src="./img/longrid/longrid-header.png" alt="longrid header pic">
+    </picture>
 
-    <img class="longrid__header-line-1" src="./img/longrid/longrid-line-1.png" alt="line pic" data-parallax="true">
-    <img class="longrid__header-line-2" src="./img/longrid/longrid-line-2.png" alt="line pic" data-parallax="true">
+    <!-- Линия 1 -->
+    <picture>
+      <source srcset="./img/longrid/longrid-line-1.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-line-1" src="./img/longrid/longrid-line-1.png" alt="line pic"
+        data-parallax="true">
+    </picture>
+
+    <!-- Линия 2 -->
+    <picture>
+      <source srcset="./img/longrid/longrid-line-2.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-line-2" src="./img/longrid/longrid-line-2.png" alt="line pic"
+        data-parallax="true">
+    </picture>
   </div>
 
   <div class="longrid__main">
@@ -30,7 +44,7 @@
     </h1>
     <div class="longrid__step">
       <a class="longrid__step-prev disabled" href="#">
-        <img src="./img/longrid/arrow-left.svg" alt="prev icon">
+        <img loading="lazy" src="./img/longrid/arrow-left.svg" alt="prev icon">
       </a>
 
       <div class="longrid__step-status" style="background: linear-gradient(180deg, #FDDDC6 0%, #F8B8B8 99.99%);">
@@ -39,7 +53,7 @@
       </div>
 
       <a class="longrid__step-next" href="#">
-        <img src="./img/longrid/arrow-right.svg" alt="next icon">
+        <img loading="lazy" src="./img/longrid/arrow-right.svg" alt="next icon">
       </a>
     </div>
     <div class="longrid__items" style="background: linear-gradient(180deg, #FDDDC6 0%, #F8B8B8 100%);">
@@ -48,7 +62,7 @@
           Житейская ситуация:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-1.svg" alt="icon">
+          <img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-1.svg" alt="icon">
 
           <p class="longrid__item-text">
             Для Алексея из Самары, выходить из-под тёплого душа утром - настоящее испытание, особенно когда за окном
@@ -62,7 +76,7 @@
           Комментарий эколога:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-2.svg" alt="icon">
+          <img img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-2.svg" alt="icon">
 
           <p class="longrid__item-text">
             Согласно данным Всемирного банка, в среднем человек использует около 150 литров воды в день. Неумеренное
@@ -76,7 +90,7 @@
           Решение / лайфхак:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-3.svg" alt="icon">
+          <img img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-3.svg" alt="icon">
 
           <p class="longrid__item-text">
             Алексей решает обновить свою ванную комнату, установив водосберегающую насадку на душ. Эта простая инновация
@@ -87,7 +101,11 @@
       </div>
     </div>
 
-    <img class="longrid__main-picture" src="./img/longrid/shower.png" alt="shower">
+    <picture>
+      <source srcset="./img/longrid/shower.webp" type="image/webp">
+      <img loading="lazy" class="longrid__main-picture" src="./img/longrid/shower.png" alt="shower">
+    </picture>
+
   </div>
 
   <div class="longrid__footer">

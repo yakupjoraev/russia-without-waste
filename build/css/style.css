@@ -746,8 +746,8 @@ body.locked {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: calc(100% + 17px);
-  height: calc(100% + 17px);
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
   background-image: url("../img/tresh/dot-bg.svg");
 }
 

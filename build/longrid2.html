@@ -17,10 +17,24 @@
   <main>
     <section class="longrid" style="background: linear-gradient(180deg, #FFEDEA 0%, #FFE2C6 100%)">
   <div class="longrid__header">
-    <img class="longrid__header-pic" src="./img/longrid/longrid-header.png" alt="longrid header pic">
+    <picture>
+      <source srcset="./img/longrid/longrid-header.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-pic" src="./img/longrid/longrid-header.png" alt="longrid header pic">
+    </picture>
 
-    <img class="longrid__header-line-1" src="./img/longrid/longrid-line-3.png" alt="line pic" data-parallax="true">
-    <img class="longrid__header-line-2" src="./img/longrid/longrid-line-4.png" alt="line pic" data-parallax="true">
+    <!-- Линия 1 -->
+    <picture>
+      <source srcset="./img/longrid/longrid-line-3.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-line-1" src="./img/longrid/longrid-line-3.png" alt="line pic"
+        data-parallax="true">
+    </picture>
+
+    <!-- Линия 2 -->
+    <picture>
+      <source srcset="./img/longrid/longrid-line-4.webp" type="image/webp">
+      <img loading="lazy" class="longrid__header-line-2" src="./img/longrid/longrid-line-4.png" alt="line pic"
+        data-parallax="true">
+    </picture>
   </div>
 
   <div class="longrid__main">
@@ -30,7 +44,7 @@
     </h1>
     <div class="longrid__step">
       <a class="longrid__step-prev disabled" href="#">
-        <img src="./img/longrid/arrow-left.svg" alt="prev icon">
+        <img img loading="lazy" src="./img/longrid/arrow-left.svg" alt="prev icon">
       </a>
 
       <div class="longrid__step-status" style="background: linear-gradient(180deg, #FFD8D3 0%, #FFBE82 100%);">
@@ -39,7 +53,7 @@
       </div>
 
       <a class="longrid__step-next" href="#">
-        <img src="./img/longrid/arrow-right.svg" alt="next icon">
+        <img img loading="lazy" src="./img/longrid/arrow-right.svg" alt="next icon">
       </a>
     </div>
     <div class="longrid__items" style="background: linear-gradient(180deg, #FFD8D3 0%, #FFBE82 100%);">
@@ -48,7 +62,7 @@
           Житейская ситуация:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-1.svg" alt="icon">
+          <img img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-1.svg" alt="icon">
 
           <p class="longrid__item-text">
             Ирина, бухгалтер в крупной компании, ежедневно сталкивается с горами бумажных документов. Она замечает,
@@ -63,7 +77,7 @@
           Комментарий эколога:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-2.svg" alt="icon">
+          <img img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-2.svg" alt="icon">
 
           <p class="longrid__item-text">
             Непрерывное производство и потребление бумаги ведёт к вырубке лесов и увеличению углеродных выбросов.
@@ -77,7 +91,7 @@
           Решение / лайфхак:
         </h4>
         <div class="longrid__item-content">
-          <img class="longrid__item-pic" src="./img/longrid/item-3.svg" alt="icon">
+          <img img loading="lazy" class="longrid__item-pic" src="./img/longrid/item-3.svg" alt="icon">
 
           <p class="longrid__item-text">
             Ирина инициирует в своей компании практику двусторонней печати и активного использования электронных
@@ -87,7 +101,11 @@
       </div>
     </div>
 
-    <img class="longrid__main-picture" src="./img/longrid/paper.png" alt="paper">
+    <picture>
+      <source srcset="./img/longrid/paper.webp" type="image/webp">
+      <img loading="lazy" class="longrid__main-picture" src="./img/longrid/paper.png" alt="paper">
+    </picture>
+
   </div>
 
   <div class="longrid__footer">
